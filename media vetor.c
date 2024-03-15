@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 
 int main (){
 	
 	float notas [3], media;
-	int i, soma;
+	int i, soma = 0;
 	
 	printf ("Digite as notas\n");
 	
@@ -12,14 +12,16 @@ int main (){
 	
 		printf ("\nDigite a %i nota : ", i+1);
 		scanf ("%f", &notas[i]);
+		soma += notas[i];
+		
 	}
 		
 
 	
-	soma += notas;
-	media = soma / 3;
+
+	media = soma / i;
 	
 	
-	printf ("\n%d Media total: %.1f ", media);
+	printf ("\n Media total: %.1f ", media);
 	
 }
