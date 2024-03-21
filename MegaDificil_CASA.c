@@ -6,15 +6,15 @@ int main() {
     setlocale(LC_ALL, "portuguese");
 
     int i, num, numero[quant];
-    int parImpar = 0,  positiveNegative= 0, maiorNum = INT_MAX, menorNum  = INT_MIN;
+    int parImpar = 0,  positiveNegative= 0, maiorNum = 9999, menorNum;
 
-	//ATIVANDO A REPETIÇÃO DA PERGUNTA
+	//ATIVANDO A REPETIÃ‡ÃƒO DA PERGUNTA
 	for (i=0; i < quant; i++) {
-		printf ("Digite o %iª número: ", i+1);
+		printf ("Digite o %iÂª nÃºmero: ", i+1);
         scanf("%i", &numero[i]);
         
         //VERIFICANDO OS NUMEROS PARES E IMPARES
-        if (numero[i] %2 == 0 && numero[i] %2 !=) {
+        if (numero[i] %2 == 0 && numero[i] %2 != 0) {
         	parImpar += 1;
 		}
          
@@ -38,13 +38,11 @@ int main() {
 } while (numero != 0);
     	
     	for (i = quant - 1; i>= 0; i--){
-    		printf ("O Elemento Inverso %iª foi o: %d ", i, numero[i]);
+    		printf ("O Elemento Inverso %iÂª foi o: %d ", i, numero[i]);
 		}
-    printf("\nQuantidade de números pares: %i", pares);
-    printf("\nQuantidade de números ímpares: %i", impares);
-    printf("\nQuantidade de números positivos: %i", positivo);
-    printf("\nQuantidade de números negativos: %i", negative);
-    printf("\nQuantidade de números inseridos: %i\n", num);
+    printf("\nQuantidade de nÃºmeros pares: %i", parImpar);
+    printf("\nQuantidade de nÃºmeros positivos: %i", positiveNegative);
+    printf("\nQuantidade de nÃºmeros inseridos: %i\n", num);
 
     return 0;
 }
