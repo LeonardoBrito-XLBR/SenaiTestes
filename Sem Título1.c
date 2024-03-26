@@ -1,40 +1,43 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#define TAM 4
+#include <locale.h>
 
-int main (){
-	
-	char situ [2000];
-	float notas [4], media;
-	int i, soma = 0;
-	
-	printf ("===== SISTEMAS DE NOTAS ===== \n");
-	
-	for (i =0; i <4; i++){
-	
-		printf ("Digite a %i nota : ", i+1);
-		scanf ("%f", &notas[i]);
-		soma = soma + notas[i];
+	int main (){
+		setlocale(LC_ALL,"");
+		
+		//1º PRIMEiRA LINHA ---- 2º SEGUNDO COLUNA
+		char disciplina[3][200];
+		float notas[3][2];
+		float media [3];
+		float soma =0;
+		int i, j; 
+		
+		for (i= 0; i < 3; i++){
+			printf ("Digite o nome da disciplina: ");
+			scanf("%s", &disciplina[i]);
+			
+			for (j = 0; j < 2; j ++){
+				printf ("Digite a %iª nota: ", j+1);
+				scanf ("%f", &notas[i][j]);
+				
+				soma += notas[i][j];
+		
+			}
+			
+			media[i]=soma/j;
+			soma = 0;
+			printf ("\n"); //PAUSA
+		}
+		
+		printf ("\n=========================");
+		for ( i= 0; i <3; i++){
+			printf ("\n%s \n", disciplina[i]);
+			
+			for ( j= 0; j <2; j++){
+				printf ("nota: %1.f \n", notas[i][j]);
+			}
+			printf ("A media foi: %1.f", media[i]);
+			printf("\n");
+		}
+		
+		 
 	}
-		media = soma / i;
-		
-		system ("cls || clear");
-		sleep (2);
-		
-	if (media >= 7) {
-		 strcpy ( situ, "APROVADO");
-		
-	} else if (media >= 5) {
-		strcpy ( situ, "RECUPERAÇÂO");
-		
-	} else if (media < 5){
-		strcpy ( situ, "REPROVADO");
-	}
-	
-	
-	
-	printf ("Voce esta: %s", situ );
-	printf ("\n Media total: %.1f ", media);
-	
-}
