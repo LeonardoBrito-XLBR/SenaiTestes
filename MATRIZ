@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 	int main (){
-		//1บ PRIMEIRA LINHA ---- 2บ SEGUNDO COLUNA
+		//1ยบ PRIMEIRA LINHA ---- 2ยบ SEGUNDO COLUNA
 		int numeros[2][2];
 		int i, j; //Lagura e Coluna
 		
