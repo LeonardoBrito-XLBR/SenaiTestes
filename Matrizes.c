@@ -4,7 +4,7 @@
 	int main (){
 		setlocale(LC_ALL,"");
 		
-		//1º PRIME]~,~´~IRA LINHA ---- 2º SEGUNDO COLUNA
+		//1Âº PRIME]~,~Â´~IRA LINHA ---- 2Âº SEGUNDO COLUNA
 		char nome[4][200];
 		float notas[4][3];
 		int i, j;
@@ -18,7 +18,7 @@
 			
 			//QUANTIDADE DE NOTAS DOS SEUS ALUNOS
 			for (j = 0; j < 3; j ++){
-				printf ("Digite a %iª nota: ", j+1);
+				printf ("Digite a %iÂª nota: ", j+1);
 				scanf ("%f", &notas[i][j]);
 				
 				soma += notas[i][j];
@@ -34,17 +34,17 @@
 		
 		printf ("\n=========================\n");
 		
-		//EXIBINDO OS NOMES DO ALUNO EM REPETIÇÃO
+		//EXIBINDO OS NOMES DO ALUNO EM REPETIÃ‡ÃƒO
 		for ( i= 0; i <4; i++){
-			printf ("%iª Aluno: %s \n", i+1, nome[i]);
+			printf ("%iÂª Aluno: %s \n", i+1, nome[i]);
 			
 			//EXIBINDO AS NOTAS COM  BASE DO NOME DO ALUNO
 			for ( j= 0; j <3; j++){
-				printf ("%iª nota: %1.f \n", j+1, notas[i][j]);
+				printf ("%iÂª nota: %1.f \n", j+1, notas[i][j]);
 					
 			}
-			//EXIBINDO A MEDIA REPETIÇÃO DOS ALUNOS
-			printf ("Média: %1.f\n", media[i]);
+			//EXIBINDO A MEDIA REPETIÃ‡ÃƒO DOS ALUNOS
+			printf ("MÃ©dia: %1.f\n", media[i]);
 			
 			printf ("\n");
 		}
